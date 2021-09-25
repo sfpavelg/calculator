@@ -55,7 +55,7 @@ public class Calculator {
     //вложенный класс селектор
     class Selector {
         public Selector() {
-//Ищем плюс,минус,умножить и делить
+/* ищем плюс,минус,умножить и делить*/
             indexPlus = calculations.indexOf('+');
             indexMinus = calculations.indexOf('-');
             indexMyltiply = calculations.indexOf('*');
@@ -90,10 +90,10 @@ public class Calculator {
 
                 result = number1 + number2;
             } else if (indexMinus > 0) {
-                //Ищем минус
+                /*ищем минус*/
                 //Если минус найден....
 
-//.... делим строку пополам создав массив с ограничением в два //индекса,вдруг там второй минус
+/*.... делим строку пополам создав массив с ограничением в два индекса,вдруг там второй минус */
                 numbersEnterString = calculations.split("\\-");
 
                 if (numbersEnterString.length > 2) {
@@ -119,7 +119,7 @@ public class Calculator {
                 }
                 result = number1 - number2;
             } else if (indexMyltiply > 0) {
-                //Ищем умножить
+                /*ищем умножить*/
                 //Если умножить найден....
 
                 // делим строку пополам создав массив с ограничением в два //индекса,вдруг там второе умножить
@@ -148,9 +148,9 @@ public class Calculator {
 
                 result = number1 * number2;
             } else if (indexDivide > 0) {
-                //Ищем деление
-                //Если деление найдено....
-                //.... делим строку пополам создав массив с ограничением в два //индекса,вдруг там второе умножить
+                /*ищем деление
+                Если деление найдено....
+                .... делим строку пополам создав массив с ограничением в два //индекса,вдруг там второе умножить*/
                 numbersEnterString = calculations.split("\\/");
                 if (numbersEnterString.length > 2) {
                     throw new Error("формат математической операции не удовлетворяет заданию - может быть только два операнда и один оператор");
